@@ -2,11 +2,9 @@
   "name": "signage-template-webpack",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server",
-    "build --prod": "webpack --mode=production",
-    "build": "webpack"
+    "start": "webpack-dev-server --env.NODE_ENV=development",
+    "build": "webpack --env.NODE_ENV=production -p --progress --colors"
   },
   "author": "",
   "license": "ISC",
