@@ -1,12 +1,14 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 
 import AdmoohTemplate from './admoohTemplate';
+export class Template extends React.Component {
+	render() {
+		return (
+			<AdmoohTemplate>
+				<h1>Sem novidades</h1>
+			</AdmoohTemplate>
+		);
+	}
+}
 
-const title = 'My Minimal React Webpack Babel Setup';
-ReactDOM.render(
-	<AdmoohTemplate><div>{title}</div></AdmoohTemplate>,
-	document.getElementById('app')
-);
-
-module.hot.accept();
+window.getadMooHTemplate = () => <Template />;

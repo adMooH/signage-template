@@ -37,7 +37,7 @@ module.exports = {
 				to: path.resolve(__dirname + '/www'),
 				force: true
 			}
-		]),
+		])
 	],
 	devServer: {
 		contentBase: './build',
