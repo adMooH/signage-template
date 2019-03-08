@@ -33,8 +33,8 @@ module.exports = {
 		new webpack.HotModuleReplacementPlugin(),
 		new CopyPlugin([
 			{
-				from: path.resolve(__dirname + '/build/*'),
-				to: path.resolve(__dirname + '/www'),
+				from: path.resolve(__dirname + '/www/index.html'),
+				to: path.resolve(__dirname + '/build'),
 				force: true
 			}
 		])

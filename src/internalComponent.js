@@ -6,9 +6,11 @@ export default class IntenalComponent extends React.Component {
 
 	render() {
 		return (
-			<>
-				<img src={logo} />
+			<div className="row">
+				<div className="col-xs-12">
+					<img className="logo img-fluid rounded float-right" src={logo} />
+				</div>
 				<h1 className="text">Component</h1>
-			</>);
+			</div>);
 	}
 }

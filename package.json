@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "start": "webpack-dev-server",
     "build --prod": "webpack --mode=production",
     "build": "webpack"
   },
@@ -11,6 +12,7 @@
   "license": "ISC",
   "dependencies": {
     "base64-inline-loader": "^1.1.1",
+    "bootstrap": "^4.3.1",
     "react": "^16.8.4",
     "react-dom": "^16.8.4"
   },
