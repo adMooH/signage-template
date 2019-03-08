@@ -1,14 +1,16 @@
 import React from 'react';
+import IntenalComponent from './internalComponent';
 
-import AdmoohTemplate from './admoohTemplate';
-export class Template extends React.Component {
+
+export class AdmooHTemplate extends React.Component {
 	render() {
 		return (
-			<AdmoohTemplate>
-				<h1>Sem novidades</h1>
-			</AdmoohTemplate>
+			<div>
+				<h1>{this.props.title}</h1>
+				<IntenalComponent />
+			</div>
 		);
 	}
 }
 
-window.getadMooHTemplate = () => <Template />;
+window.getadMooHTemplate = (props) => <AdmooHTemplate {...props} />;
