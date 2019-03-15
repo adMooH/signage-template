@@ -1,8 +1,7 @@
 import React from "react";
-export default function admoohTemplate(Template, data) {
-	return class extends React.Component {
-		render() {
-			return <Template data={data} {...this.props} />;
-		}
+
+export default class AdmoohTemplate extends React.Component {
+	componentWillMount() {
+		console.log('eu');
 	}
 }

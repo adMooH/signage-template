@@ -1,6 +1,6 @@
 import React from 'react';
-import vaca from './images/vaca.png';
-import './styles/app.css'
+import vaca from '../images/vaca.png';
+import '../styles/app.css'
 
 export default class HeavenComponent extends React.Component {
 	render() {
