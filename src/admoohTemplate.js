@@ -1,19 +1,8 @@
-import React from 'react';
-
-import HeavenComponent from './heavenComponent';
-import ClockComponent from './clockComponent';
-
-import 'bootstrap/dist/css/bootstrap.css';
-import './styles/app.css'
-
-export class AdmooHTemplate extends React.Component {
-	render() {
-		return (
-			<div className="template">
-				<HeavenComponent />
-				<ClockComponent />
-			</div>
-		);
+import React from "react";
+export default function admoohTemplate(Template, data) {
+	return class extends React.Component {
+		render() {
+			return <Template data={data} {...this.props} />;
+		}
 	}
 }
-window.getadMooHTemplate = (props) => <AdmooHTemplate {...props} />;

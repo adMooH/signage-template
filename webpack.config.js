@@ -7,9 +7,28 @@ module.exports = (env, argv) => {
 	const config = {
 		mode: mode || 'development'
 	}
-	config.entry = config.mode === 'development' ? './src/app.js' : './src/admoohTemplate.js';
-	config.out = config.mode === 'development' ? 'template.js' : 'template.prod.js';
+
+	const template = argv.t;
+
+	if (template === undefined || template === null || template === "") {
+		console.error("ERROR:No template was specified.");
+		process.exit(1);
+	}
+
+	if (config.mode === 'development') {
+		// User is debugging a template
+		process.env.REACT_APP_TEMPLATE = template;
+		config.entry = './app.js';
+		config.out = 'template.debug.js';
+	} else {
+		// User is exporting a template
+		const templateName = template.split('/')[2];
+		config.entry = template;
+		config.out = `template.${templateName}.js`;
+	}
+
 	console.log(config);
+
 	return {
 		entry: config.entry,
 		module: {
@@ -45,7 +64,10 @@ module.exports = (env, argv) => {
 					to: path.resolve(__dirname + '/build'),
 					force: true
 				}
-			])
+			]),
+			new webpack.EnvironmentPlugin({
+				ADMOOH_TEMPLATE: template,
+			})
 		],
 		devServer: {
 			contentBase: './build',
