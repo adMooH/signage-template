@@ -11,10 +11,10 @@ import './styles/app.css'
 export default class AdmooHFlyingClock extends AdmoohTemplate {
 	render() {
 		return (
-			<div className="template">
+			<>
 				<HeavenComponent />
 				<ClockComponent />
-			</div>
+			</>
 		);
 	}
 }
