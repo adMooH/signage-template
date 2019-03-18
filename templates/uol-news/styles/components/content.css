@@ -24,19 +24,20 @@
 }
 
 .type {
-    margin-top: 120px;
-    margin-left: 150px;
+    margin-top: 130px;
+    margin-left: 120px;
+    margin-bottom: -30px;
     font-weight: bold;
     font-size: 5em;
     text-transform: uppercase;
 }
 
 .title {
-    margin-left: 150px;
+    margin-left: 100px;
     margin-top: 30px;
-    font-size: 3.5em;
+    font-size: 3em;
     font-weight: lighter;
-    padding: 0;
+    padding: 1.5rem;
 }
 
 .date {
