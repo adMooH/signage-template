@@ -7,7 +7,6 @@ import adMooHLogo from '../images/adMoohLogo.png'
 import uolLogo from '../images/uolLogo.png'
 
 import * as layout from '../styles/app.css';
-import * as bootstrap from '../styles/bootstrap/css/bootstrap.min.css';
 
 export default class Content extends Component {
 	constructor(props) {
@@ -23,7 +22,7 @@ export default class Content extends Component {
 		return (
 			<div style={{ ...layout.content, backgroundImage: `url(${image})` }}>
 				<Header adMoohLogo={adMooHLogo} uolLogo={uolLogo} />
-				<footer style={{ ...layout.news, ...bootstrap.position_absolute, ...bootstrap.d_flex, ...bootstrap.justify_content_between }} >
+				<footer style={{ ...layout.news}} >
 					<div style={layout.news__news_content}>
 						<h2 style={layout.type}>
 							{type}

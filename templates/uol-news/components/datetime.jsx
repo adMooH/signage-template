@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import * as layout from '../styles/app.css';
-import * as bootstrap from '../styles/bootstrap/css/bootstrap.min.css';
 
 export default class DateTime extends Component {
 
@@ -31,7 +30,7 @@ export default class DateTime extends Component {
 
 
 		return (
-			<div style={bootstrap.datetime}>
+			<div>
 				<h2 style={layout.date_h2}>
 					{("0" + hour).slice(-2)}h
                     {("0" + minute).slice(-2)}

@@ -7,7 +7,7 @@ const { getadMooHTemplate } = require(process.env.ADMOOH_TEMPLATE);
 const template = getadMooHTemplate({
 	data: [
 		{
-			title: "Oi | Hello World",
+			title: "Oi | Lorem luizai ipsum dolor sit amet, consectetur adipiscing elit.",
 			content: {
 				_url: "https://www.elastic.co/assets/blt3541c4519daa9d09/maxresdefault.jpg?uid=blt3541c4519daa9d09"
 			}
