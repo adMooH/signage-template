@@ -7,7 +7,7 @@ import adMooHLogo from '../images/adMoohLogo.png'
 import uolLogo from '../images/uolLogo.png'
 
 import * as layout from '../styles/app.css';
-import * as bootstrap from 'bootstrap/dist/css/bootstrap.css';
+import * as bootstrap from '../styles/bootstrap/css/bootstrap.min.css';
 
 export default class Content extends Component {
 	constructor(props) {

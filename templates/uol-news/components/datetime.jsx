@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import * as layout from '../styles/app.css';
-import * as bootstrap from 'bootstrap/dist/css/bootstrap.css';
+import * as bootstrap from '../styles/bootstrap/css/bootstrap.min.css';
 
 export default class DateTime extends Component {
 
