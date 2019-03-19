@@ -9,10 +9,18 @@ const template = getadMooHTemplate({
 		{
 			title: "Oi | Hello World",
 			content: {
-				_url: "https://cdn.pixabay.com/photo/2016/06/18/17/42/image-1465348_1280.jpg"
+				_url: "https://www.elastic.co/assets/blt3541c4519daa9d09/maxresdefault.jpg?uid=blt3541c4519daa9d09"
 			}
 		}
 	]
 });
 
-ReactDOM.render(<div className="template">{template}</div>, document.getElementById("app"));
+ReactDOM.render(<div style={{
+	width: "100%",
+	height: "100%",
+	zIndex: "10",
+	top: "0",
+	left: "0",
+	position: "fixed",
+	textAlign: "center"
+}}> {template}</div >, document.getElementById("app"));

@@ -1,16 +1,16 @@
 import React, { Component } from 'react'
-import '../styles/components/header.css';
+import * as layout from '../styles/app.css';
+import * as bootstrap from 'bootstrap/dist/css/bootstrap.css';
 
 export default class Header extends Component {
 	render() {
 		return (
-
-			<header className="logos">
-				<div className="d-flex justify-content-between d-flex align-items-center">
-					<img className="img-fluid uol" src={this.props.uolLogo} alt="UOL - O melhor conteúdo" />
-					<img className="img-fluid admooh" src={this.props.adMoohLogo} alt="AdMooh" />
+			<header style={layout.logos}>
+				<div style={{ ...bootstrap.d_flex, ...bootstrap.justify_content_between, ...bootstrap.align_items_center }}>
+					<img style={{ ...layout.logos__uol, ...bootstrap.img_fluid }} src={this.props.uolLogo} alt="UOL - O melhor conteúdo" />
+					<img style={{ ...layout.logos__admooh, ...bootstrap.img_fluid }} src={this.props.adMoohLogo} alt="AdMooh" />
 				</div>
-			</header>
+			</header >
 		)
 	}
 }

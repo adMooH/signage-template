@@ -40,7 +40,7 @@ module.exports = (env, argv) => {
 				},
 				{
 					test: /\.css$/,
-					use: ['style-loader', 'css-loader']
+					use: ['inline-css-webpack-loader']
 				},
 				{
 					test: /\.(jpe?g|png|ttf|eot|svg|woff(2)?)(\?[a-z0-9=&.]+)?$/,
