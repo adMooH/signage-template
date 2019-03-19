@@ -5,6 +5,7 @@ import '../styles/views/template-view.css';
 export default class TemplateUolView extends React.Component {
 	render() {
 		const news = this.props.news;
+		console.log(news);
 		const title = news.title.split('|')[1];
 		return (
 			<div className="template-uol-view">

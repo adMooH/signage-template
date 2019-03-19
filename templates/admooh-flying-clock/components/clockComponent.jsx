@@ -1,14 +1,13 @@
-import React from 'react';
-import '../styles/app.css'
-import { clearInterval } from 'timers';
+import React from "react";
+import "../styles/app.css";
+import { clearInterval } from "timers";
 
 export default class ClockComponent extends React.Component {
-
 	constructor(props) {
-		super(props)
+		super(props);
 		this.state = {
-			date: new Date(),
-		}
+			date: new Date()
+		};
 	}
 	componentDidMount() {
 		this.clockerInterval = setInterval(
@@ -25,7 +24,9 @@ export default class ClockComponent extends React.Component {
 		const minute = this.state.date.getMinutes();
 		return (
 			<div>
-				<h1 className="clock">{`${hour}:${minute > 10 ? minute : '0' + minute}`}</h1>
+				<h1 className="clock">{`${hour}:${
+					minute >= 10 ? minute : "0" + minute
+				}`}</h1>
 			</div>
 		);
 	}
