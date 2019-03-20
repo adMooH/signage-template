@@ -9,6 +9,7 @@ module.exports = (env, argv) => {
 	}
 
 	const template = argv.t;
+	const rss = argv.rss;
 
 	if (template === undefined || template === null || template === "") {
 		console.error("ERROR:No template was specified.");
@@ -67,6 +68,7 @@ module.exports = (env, argv) => {
 			]),
 			new webpack.EnvironmentPlugin({
 				ADMOOH_TEMPLATE: template,
+				TEMPLATE_RSS: rss
 			})
 		],
 		devServer: {

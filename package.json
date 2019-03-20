@@ -10,8 +10,10 @@
   "license": "ISC",
   "dependencies": {
     "base64-inline-loader": "^1.1.1",
+    "node-fetch": "^2.3.0",
     "react": "^16.8.4",
-    "react-dom": "^16.8.4"
+    "react-dom": "^16.8.4",
+    "x2js": "^3.2.6"
   },
   "babel": {
     "presets": [

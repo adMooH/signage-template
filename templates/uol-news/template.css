@@ -4,6 +4,11 @@
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
+@keyframes example {
+    from {background-color: red;}
+    to {background-color: yellow;}
+  }
+
 .content {
     width: 100%;
     height: 100%;
@@ -15,37 +20,40 @@
     width: 100%;
     bottom: 0;
     left: 0;
-    padding: 1rem;
+    padding: 1%;
 }
 
 .news .news-content {
-    width: 600px;
-    height: 600px;
+    width: 50%;
+    height: 85%;
     color: white;
     background-color: rgba(0, 0, 0, 0.76);
     border-radius: 50%;
     overflow: hidden;
-    margin-left: -100px;
-    margin-bottom: -200px;
+    margin-left: -9%;
+    margin-bottom: -15%; 
     bottom: 0;
-    position: absolute;
+    position: absolute;    
 }
 
 .type {
-    margin-top: 60px;
-    margin-left: 40px;
-    margin-bottom: -30px;
+    margin-top: 15%;
+    margin-bottom: 5%;
+    text-align: start;
+    padding-left: 20%;
     font-weight: bold;
-    font-size: 3em;
+    font-size: 3.5vw;
     text-transform: uppercase;
 }
 
 .title {
-    margin-left: 40px;
-    margin-top: 30px;
-    font-size: 2.5em;
+    margin-top: 0;
+    font-size: 2.5vw;
     font-weight: lighter;
-    padding: 1rem;
+    padding-left: 20%;
+    padding-right: 10%;
+    line-height: 3.5vw;
+    text-align: start;
 }
 
 .date {
@@ -53,19 +61,20 @@
     bottom: 0;
     right: 0;
     color: white;
-    padding: 3rem;
+    padding: 1vw;
 }
 
 .date h2 {
-    font-size: 3em;
+    font-size: 5vw;
     font-weight: bold;
     margin-bottom: 0;
 }
 
 .date h3 {
-    font-size: 2.5em;
+    font-size: 2.5vw;
     font-weight: lighter;
     text-transform: uppercase;
+    margin-top: 2%;
 }
 
 .logos {
@@ -73,21 +82,21 @@
 }
 
 .logos .uol {
-    max-width: 431px;
-    max-height: 162px;
+    max-width: 30%;
+    max-height: 30%;
     width: 10%;
     height: 10%;
-    margin-top: 30px;
-    margin-left: 30px;
+    margin-top: 1%;
+    margin-left: 1%;
     float: left;
 }
 
 .logos .admooh {
-    max-width: 80px;
-    max-height: 80px;
+    max-width: 8%;
+    max-height: 8%;
     width: 30%;
     height: 30%;
-    margin-top: 30px;
-    margin-right: 30px;
+    margin-top: 1%;
+    margin-right: 1%;
     float: right
 }
