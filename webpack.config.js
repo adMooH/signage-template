@@ -7,10 +7,7 @@ module.exports = (env, argv) => {
 	const config = {
 		mode: mode || 'development'
 	}
-
 	const template = argv.t;
-	const rss = argv.rss;
-
 	if (template === undefined || template === null || template === "") {
 		console.error("ERROR:No template was specified.");
 		process.exit(1);
@@ -28,8 +25,10 @@ module.exports = (env, argv) => {
 		config.out = `template.${templateName}.js`;
 	}
 
+	const appEnvs = {
+		ADMOOH_TEMPLATE: template
+	};
 	console.log(config);
-
 	return {
 		entry: config.entry,
 		module: {
@@ -66,10 +65,7 @@ module.exports = (env, argv) => {
 					force: true
 				}
 			]),
-			new webpack.EnvironmentPlugin({
-				ADMOOH_TEMPLATE: template,
-				TEMPLATE_RSS: rss
-			})
+			new webpack.EnvironmentPlugin(appEnvs)
 		],
 		devServer: {
 			contentBase: './build',
