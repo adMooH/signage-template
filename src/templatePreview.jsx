@@ -6,7 +6,11 @@ export default class TemplatePreview extends React.Component {
 			getTemplate: props.getTemplate,
 			data: props.data
 		};
+		setInterval(() => {
+			this.forceUpdate();
+		}, 15000);
 	}
+
 
 	render() {
 		const templateProps = {

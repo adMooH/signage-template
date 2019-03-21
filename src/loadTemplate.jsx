@@ -115,7 +115,7 @@ class LoadTemplate extends React.Component {
 										value={this.state.rssUrl}
 										onChange={this.onRSSUrlChange} />
 								</FormControl>
-								<TextField									
+								<TextField
 									label="Width"
 									type="number"
 									InputLabelProps={{
@@ -123,7 +123,7 @@ class LoadTemplate extends React.Component {
 									}}
 									margin="normal"
 								/>
-								<TextField									
+								<TextField
 									label="Height"
 									type="number"
 									className={classes.textField}
