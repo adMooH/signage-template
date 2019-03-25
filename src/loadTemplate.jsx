@@ -43,6 +43,7 @@ const styles = theme => ({
 		marginTop: "5%"
 	},
 	template: {
+		backgroundColor: "black",
 		width: "100%",
 		height: "100%",
 		zIndex: "10",
