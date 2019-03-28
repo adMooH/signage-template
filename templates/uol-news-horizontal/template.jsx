@@ -4,33 +4,96 @@ import * as layout from './template.css';
 import uolLogo from './images/uolLogo.png'
 import adMooHLogo from './images/adMoohLogo.png'
 
-export default class UolNews extends React.Component {
+const daysOfWeek = [
+	"Domingo",
+	"Segunda",
+	"Terça",
+	"Quarta",
+	"Quinta",
+	"Sexta",
+	"Sábado"
+];
+
+
+
+export default class UolTemplate extends React.Component {
+	constructor(props){
+		super(props);
+	}
+	render() {		
+        return(
+			<div style={{
+				width: "100%",
+				height: "100%"
+			}}>			
+				<UolSplash/>
+				 <UolNews {...this.props}/>
+			</div>
+		);
+    }
+}
+
+
+class UolSplash extends React.Component {
+	constructor(props){
+		super(props);
+		this.state = {
+			shown: true
+		}
+	}
+	componentDidMount(){
+		setTimeout(() => {
+			this.setState({shown: false});
+		}, 1100);
+	}
+    render() {
+		const animation = this.state.shown
+		? {} 
+		:{
+			transition: 'opacity 0.5s linear',
+			opacity: 0
+		}
+		const style = {
+			width: "100%",
+			height: "100%",
+			backgroundColor: '#363636',			
+			position: 'absolute',
+			zIndex: 9
+		};
+        return(
+			<div style={{...style, ...animation}}>
+				<img style={{
+					position: "absolute",
+					margin: "auto",
+					width: "30%",
+					height: "20%",				
+					top: 0,
+					left: 0,
+					right: 0,
+					bottom: 0,
+			}} src={uolLogo}/> 
+		   </div>
+		);
+    }
+}
+
+class UolNews extends React.Component {
 	constructor(props) {
 		super(props)
 		this.state = {
 			date: new Date(),
+			showingHolder: true,
 			isVisible: false
 		}
 	}
 	render() {
-		const daysOfWeek = [
-			"Domingo",
-			"Segunda",
-			"Terça",
-			"Quarta",
-			"Quinta",
-			"Sexta",
-			"Sábado"
-		]
+	
 		const hour = this.state.date.getHours();
 		const minute = this.state.date.getMinutes();
 		const day = daysOfWeek[this.state.date.getDay()];
 		const date = this.state.date.getDate();
 		const month = this.state.date.getMonth() + 1;
-		const news = this._getNewsWithThumbnail();
-
-
-
+		const news = this._getNewsWithThumbnail()
 		const type = news.title;
 		const description = news.description;
 		const picture = news.linkfoto;
@@ -64,9 +127,9 @@ export default class UolNews extends React.Component {
 							</div>
 						</div>
 					</footer>
-				</div>
+				</div>	
 			</div>
-		)
+		);
 	}
 	_getNewsWithThumbnail() {
 		const items = this.props.data.filter(i => i.linkfoto !== "");

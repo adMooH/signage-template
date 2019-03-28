@@ -1,7 +1,7 @@
 .template-uol-view {
     width: 100%;
     height: 100%;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family: 'Roboto', 'Open Sans' ,'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 .content {
@@ -46,7 +46,7 @@
 .title {
     margin-top: 0;
     font-size: 3vh;
-    font-weight: lighter;
+    font-weight: normal;
     padding-left: 33%;
     padding-right: 10%;
     text-align: start;
@@ -58,6 +58,7 @@
     right: 0;
     left: 0;
     color: white;
+    text-shadow: -1x 0 black, 0 1px black, 1px 0 black, 0 -1px black;
     padding: 1vw;
 }
 

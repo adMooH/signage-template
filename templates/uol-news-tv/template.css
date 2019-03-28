@@ -41,7 +41,7 @@
 .news-type {
     margin-bottom: -3%;
     margin-top: 4%;
-    font-weight: bold;
+    font-weight: bolder;
     text-transform: uppercase;
     font-size: 2.5vw;
     text-align: left;
@@ -50,7 +50,7 @@
 .news-text {
     margin-bottom: 0;
     margin-top: 5%;
-    font-weight: lighter;
+    font-weight: normal;
     font-size: 2vw;  
     text-align: justify;
 }
