@@ -1,6 +1,6 @@
 # adMooH Signage Template
 
-[![N|Solid](//v.fastcdn.co/t/19d828a0/7be5dd4b/1553632330-39975901-182x69x182x91x0x11-logo-admooh-preto.png)](https://home.admooh.com/)
+[![N|Solid](http://v.fastcdn.co/u/19d828a0/31820341-0-Logo-adMooH-Vertical.png)](https://home.admooh.com/)
 
 adMooH Signage template é uma ferramenta para a construções de templates que serão usados nos canais de conteúdo dentro da plataforma adMooH.
 Os templates são construídos em javascript utilizando [React.js](https://reactjs.org/), com essa ferramenta você pode
