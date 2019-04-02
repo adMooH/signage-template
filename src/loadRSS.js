@@ -10,7 +10,7 @@ export default class ResolveRSS {
 		return fetch("https://cors-anywhere.herokuapp.com/" + rss)
 			.then(res => res.arrayBuffer())
 			.then(rssBffr => {
-				const dec = new TextDecoder("iso-8859-1");
+				const dec = new TextDecoder("iso-8859-2");
 				const feedXml = dec.decode(rssBffr);
 				const x2js = new X2JS();
 				const doc = x2js.xml2js(feedXml);
