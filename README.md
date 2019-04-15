@@ -72,7 +72,7 @@ export default class SampleTemplate extends React.Component {
         return(
 			<div>
 			    <h1 style={customStyle}>Style1</h1>
-			     <h1 style={layout.customCss}>Style1</h1>
+                <h1 style={layout.customCss}>Style1</h1>
 			</div>
 		);
     }
