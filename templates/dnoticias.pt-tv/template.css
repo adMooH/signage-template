@@ -13,16 +13,17 @@
 .dnoticias-logo {
     height: 100%;
     width: 24%;
-    margin-bottom: -1%;
-    float: left;
-    overflow: hidden;
     position: absolute;
-    background-color: #173c88;
+    float: left;
 }
 
 .dnoticias-logo img {
     width: 100%;
     height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: inherit;
 }
 
 .news {
@@ -33,7 +34,7 @@
     float: right;
 }
 
-.news-type {
+.news-title {
     margin-bottom: -3.5%;
     margin-top: 2.5%;
     font-weight: bolder;
@@ -45,10 +46,10 @@
 .news-text {
     margin-bottom: 0;
     margin-top: 5%;
-    font-weight: normal;
-    font-size: 3vh;  
+    font-weight: normal; 
     text-align: justify;    
     overflow: hidden;
     text-overflow: ellipsis;
-    max-height: 45%;
+    line-height: 1.3;
+    font-size: 3.5vh;  
 }
