@@ -3,6 +3,8 @@ import * as layout from './template.css';
 
 import dnoticiasLogo from './images/dnoticias-pt-logo.png'
 
+const d = new RegExp("<p>([\s\S]*)?<\/p>", "gm")
+
 export default class DNoticiasNews extends React.Component {
 	constructor(props) {
 		super(props);
@@ -11,7 +13,8 @@ export default class DNoticiasNews extends React.Component {
 		const news = this._getNewsWithThumbnail();		
 		const title = news.title;
 		const pic = news.content._url;
-		const dnew = news.description.replace(/(<([^>]+)>)/g, "").split('.')[0];
+		const m = news.description.match(/<p>([\s\S]*)?<\/p>/i)||[];
+		const dnew = m[1] || '';
 		return (
 			<div style={layout.template_dnoticias}>
 				<DNoticiasLogo src={pic}/>
@@ -23,7 +26,11 @@ export default class DNoticiasNews extends React.Component {
 						{title}
 					</p>
 					<p style={layout.news_text} >
-						{dnew.length > 130 ? dnew.substring(0,130) + "..." : dnew + "." }
+						{
+							title.length < 100 ?
+							(dnew.length > 130 ? dnew.substring(0,130) + "..." : dnew + ".")
+							: "" 
+						}
 					</p>			
 				</div>
 			</div>
