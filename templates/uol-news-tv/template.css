@@ -11,29 +11,31 @@
 }
 
 .uol-logo {
-    width: 40%;
-    height: 105%;
-    margin-left: -18%;
-    margin-bottom: -1%;
+    height: 100%;
+    width: 24%;
+    position: absolute;
     float: left;
     background-color: rgba(0, 0, 0, 0.76);
-    overflow: hidden;
-    bottom: 0;
-    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .uol-logo img {
-    width: 38%;
-    height: 62%;
-    margin-top: 10%;
-    margin-left: 43%;
+    width: 70%;
+    margin-top: 0px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: inherit;
+   
 }
 
 .news {
     width: 70%;
     height: 100%;
     margin-top: 1%;
-    margin-right: 5%;
+    margin-right: 3%;
     float: right;
 }
 
