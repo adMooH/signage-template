@@ -70,9 +70,11 @@ class Alert extends React.Component {
 class LoadTemplate extends React.Component {
 	constructor(props) {
 		super(props);
+
+		const rss = window.localStorage.getItem("rss");
 		this.state = {
 			getTemplate: props.getTemplate,
-			rssUrl: "",
+			rssUrl: rss,
 			templateItems: [],
 			openDialog: false,
 			dialogText: "",
@@ -197,7 +199,9 @@ class LoadTemplate extends React.Component {
 		e.preventDefault();
 		if (this.state.templateItems.length <= 0) {
 			this.setState({ dialogText: "Loading RSS Items ...", openDialog: true });
+			
 			const rss = this.state.rssUrl;
+			window.localStorage.setItem("rss",rss);
 			this.ResolveRSS.getRSSItems(rss).then(items => {
 				this.setState({ isPreview: false, templateItems: items });
 			}).catch(err => {
